@@ -31,7 +31,7 @@ export default function Navbar() {
     >
       <div className="max-w-[1320px] w-full mx-auto px-6 sm:px-10 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 font-display text-4xl">
-          <img src={logo} alt="Captura Media" className=" w-40" />
+          <img src="https://res.cloudinary.com/dszlo11rt/image/upload/v1769000047/bbbb_gjoyzl.png" alt="Captura Media" className=" w-40" />
         </Link>
 
         {/* Desktop nav */}

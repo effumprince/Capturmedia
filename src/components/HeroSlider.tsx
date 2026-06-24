@@ -61,7 +61,7 @@ export default function HeroSlider() {
             <span className="exif-tag">Photography — Videography — Graphic Design</span>
           </div>
 
-          <h1 className="lg:text-[clamp(2.9rem,17vh,9rem)] md:text-[clamp(1.5rem,15vh,5rem)] sm:text-[clamp(1.5rem,13vh,5rem)] text-[clamp(1.5rem,10vh,5rem)] leading-[0.95] max-w-[18ch]">
+          <h1 className="lg:text-[clamp(2.9rem,15vh,9rem)] md:text-[clamp(1.5rem,14vh,5rem)] sm:text-[clamp(1.5rem,13vh,5rem)] text-[clamp(1.5rem,10vh,5rem)] leading-[0.95] max-w-[18ch]">
             <span className="hero-title-line">
               <b style={{ animationDelay: '450ms' }}>Creating Visually</b>
             </span>
