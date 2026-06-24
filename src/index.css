@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* color tokens — derived from the Captura Media brand mark */
+  --color-ink: #0a0a0a;
+  --color-charcoal: #161616;
+  --color-charcoal-2: #1f1f1f;
+  --color-paper: #fafaf8;
+  --color-paper-dim: #f0efe9;
+  --color-shutter: #ff0002;
+  --color-shutter-dim: #c40103;
+  --color-slate: #6b6b6b;
+  --color-slate-light: #a3a3a0;
+
+  /* fonts */
+  --font-display: "Bebas Neue", Impact, sans-serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* extra breakpoint-friendly sizes for the display type scale */
+  --text-display-xl: clamp(3.5rem, 9vw, 8.5rem);
+  --text-display-l: clamp(2.5rem, 6vw, 5.5rem);
+  --text-display-m: clamp(1.8rem, 4vw, 3.2rem);
+  --text-display-s: clamp(1.4rem, 2.6vw, 2rem);
+
+  /* easings */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-custom: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    margin: 0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.02;
+    text-transform: uppercase;
+  }
+}
+
+::selection {
+  background: var(--color-shutter);
+  color: #fff;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-shutter);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   EXIF eyebrow label — recurring structural device borrowed from camera
+   metadata (used wherever the design needs a small uppercase tag/kicker)
+   ========================================================================== */
+.exif-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-shutter);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.exif-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-shutter);
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Hero background crossfade slider
+   ========================================================================== */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.12);
+  transition: opacity 1.8s var(--ease-in-out-custom), transform 9s linear;
+}
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-grid-overlay {
+  background-image:
+    repeating-linear-gradient(transparent 0, transparent calc(33.33% - 0.5px), rgba(255,255,255,0.22) calc(33.33% - 0.5px), rgba(255,255,255,0.22) 33.33%),
+    repeating-linear-gradient(90deg, transparent 0, transparent calc(33.33% - 0.5px), rgba(255,255,255,0.22) calc(33.33% - 0.5px), rgba(255,255,255,0.22) 33.33%);
+  opacity: 0.5;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes rise-text {
+  to { transform: translateY(0); }
+}
+@keyframes scrollcue {
+  0% { top: -100%; }
+  60% { top: 100%; }
+  100% { top: 100%; }
+}
+@keyframes slowpan {
+  from { transform: scale(1.05) translateX(0); }
+  to { transform: scale(1.15) translateX(-1.5%); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-rise {
+  opacity: 0;
+  animation: rise 0.9s var(--ease-out-expo) forwards;
+}
+.animate-slowpan {
+  animation: slowpan 16s ease-in-out infinite alternate;
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.hero-title-line {
+  display: block;
+  overflow: hidden;
+}
+.hero-title-line b {
+  display: block;
+  transform: translateY(110%);
+  animation: rise-text 1s var(--ease-out-expo) forwards;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.scroll-cue-line {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-cue-line::after {
+  content: '';
+  position: absolute;
+  top: -100%; left: 0;
+  width: 100%; height: 100%;
+  background: var(--color-shutter);
+  animation: scrollcue 1.8s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Scroll reveal — driven by useReveal hook toggling data-visible
+   ========================================================================== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+[data-reveal][data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal="scale"] { transform: scale(0.94); }
+[data-reveal="scale"][data-visible="true"] { transform: scale(1); }
+[data-reveal="left"] { transform: translateX(-36px); }
+[data-reveal="left"][data-visible="true"] { transform: translateX(0); }
+[data-reveal="right"] { transform: translateX(36px); }
+[data-reveal="right"][data-visible="true"] { transform: translateX(0); }
+
+/* image reveal: zoom-out on entry */
+.img-mask img {
+  transform: scale(1.15);
+  transition: transform 1.2s var(--ease-out-expo);
+}
+[data-visible="true"] .img-mask-inner {
+  transform: scale(1);
+}
+.img-mask-inner {
+  transform: scale(1.15);
+  transition: transform 1.2s var(--ease-out-expo);
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Aperture wipe (page-load transition) blades
+   ========================================================================== */
+.aperture-blade {
+  transform-origin: 70px 70px;
+  transition: transform 0.9s var(--ease-in-out-custom);
+}
