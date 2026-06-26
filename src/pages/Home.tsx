@@ -15,7 +15,7 @@ const homeStats = [
 ];
 
 export default function Home() {
-  const teaserItems = catalogItems.slice(0, 8); // Show the first 8 items in the catalog as a teaser
+  // const teaserItems = catalogItems.slice(0, 8); // Show the first 8 items in the catalog as a teaser
 
   return (
     <>
