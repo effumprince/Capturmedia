@@ -314,7 +314,7 @@ export default function Booking() {
     try {
       setLoading(true);
 
-      const res = await fetch("https://YOUR_API_URL_HERE", {
+      const res = await fetch("https://usebasin.com/f/7a5705aaa01a", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
