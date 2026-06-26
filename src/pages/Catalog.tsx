@@ -597,10 +597,15 @@ style={{
       )}
 
       <section className="py-16 sm:py-28 bg-paper-dim text-center">
-        <Reveal>
-          <h2>Let's add your project to the catalog.</h2>
-          <Button to="/booking">Book with us</Button>
-        </Reveal>
+         <Reveal variant="scale">
+             <span className="exif-tag justify-center mb-5">Liked what you saw?</span>
+             <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] max-w-[18ch] mx-auto mt-5 mb-8">
+               Let's add your project to the catalog.
+             </h2>
+             <Button to="/booking" variant="primary" className="px-9 py-5 text-[0.85rem]">
+               Book with us
+             </Button>
+         </Reveal>
       </section>
     </>
   );

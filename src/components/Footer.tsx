@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="bg-ink text-white pt-16 sm:pt-24 pb-8">
       <div className="max-w-[1320px] mx-auto px-6 sm:px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-10 lg:gap-12 pb-10 sm:pb-16 border-b border-white/10">
-          <div className="flex flex-col gap-5">
-            <Link to="/" className="flex items-center gap-2.5">
+          <div className="flex flex-col gap-1">
+            <Link to="/" className="">
               <img src="https://res.cloudinary.com/dszlo11rt/image/upload/v1769000047/bbbb_gjoyzl.png" alt="Captura Media" className=" w-30 brightness-0 invert" />
             </Link>
             <p className="max-w-[280px] text-sm text-white/70">
@@ -44,8 +44,8 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="flex flex-col gap-3">
-              <li><a href="mailto:hello@capturamedia.studio" className="text-white/80 text-[0.95rem] hover:text-shutter transition-colors">hello@capturamedia.studio</a></li>
-              <li><a href="tel:+233000000000" className="text-white/80 text-[0.95rem] hover:text-shutter transition-colors">+233 00 000 0000</a></li>
+              <li><a href="capturamedia2025@gmail.com" className="text-white/80 text-[0.95rem] hover:text-shutter transition-colors">capturamedia2025@gmail.com</a></li>
+              <li><a href="+233 537 117 760 / +233 509 254 431" className="text-white/80 text-[0.95rem] hover:text-shutter transition-colors">+233 537 117 760 / +233 509 254 431</a></li>
               <li><Link to="/booking#contact" className="text-white/80 text-[0.95rem] hover:text-shutter transition-colors">Accra, Ghana</Link></li>
             </ul>
           </div>

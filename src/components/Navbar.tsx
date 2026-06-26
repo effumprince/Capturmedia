@@ -89,11 +89,11 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-[5px] w-6 z-[210] cursor-pointer text-white transition-all duration-300 hover:text-shutter"
         >
           <span
-            className={`h-[2px] bg-ink transition-transform duration-300 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`}
+            className={`h-[2px] bg-white transition-transform duration-300 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`}
           />
-          <span className={`h-[2px] bg-ink transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`h-[2px] bg-white transition-opacity duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
           <span
-            className={`h-[2px] bg-ink transition-transform duration-300 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
+            className={`h-[2px] bg-white transition-transform duration-300 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
           />
         </button>
       </div>

@@ -10,8 +10,8 @@ export default function ApertureWipe() {
   const [stage, setStage] = useState<'hold' | 'open' | 'gone'>('hold');
 
   useEffect(() => {
-    const openTimer = setTimeout(() => setStage('open'), 80);
-    const goneTimer = setTimeout(() => setStage('gone'), 1150);
+    const openTimer = setTimeout(() => setStage('open'), 10);
+    const goneTimer = setTimeout(() => setStage('gone'), 1800);
     return () => {
       clearTimeout(openTimer);
       clearTimeout(goneTimer);
