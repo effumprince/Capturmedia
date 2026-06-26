@@ -8,14 +8,14 @@ import Button from '../components/Button';
 import { services, catalogItems } from '../data/content';
 
 const homeStats = [
-  { value: '150+', label: 'Projects delivered' },
-  { value: '4', label: 'Years in business' },
-  { value: '60+', label: 'Weddings shot' },
+  { value: '50+', label: 'Projects delivered' },
+  { value: '2', label: 'Years in business' },
+  { value: '20+', label: 'Weddings shot' },
   { value: '98%', label: 'Client satisfaction' },
 ];
 
 export default function Home() {
-  const teaserItems = catalogItems.slice(0, 4);
+  const teaserItems = catalogItems.slice(0, 8); // Show the first 8 items in the catalog as a teaser
 
   return (
     <>

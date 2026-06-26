@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
 import IrisDivider from '../components/IrisDivider';
 import StatStrip from '../components/StatStrip';
+
 import Button from '../components/Button';
 import { heroImages, catalogItems, coreValues, teamMembers } from '../data/content';
 
@@ -13,8 +14,8 @@ const processSteps = [
 ];
 
 const aboutStats = [
-  { value: '150+', label: 'Projects delivered' },
-  { value: '4', label: 'Years in business' },
+  { value: '50+', label: 'Projects delivered' },
+  { value: '2', label: 'Years in business' },
   { value: '3', label: 'Disciplines, one team' },
   { value: '98%', label: 'Client satisfaction' },
 ];
@@ -34,15 +35,14 @@ export default function About() {
                 Started with one camera and a deadline to keep.
               </h2>
               <p className="text-[1.05rem] mb-5 text-slate">
-                Captura Media began in 2021 the way most studios do — one person, one camera, and a
-                wedding to shoot on a Saturday with no backup plan. What's changed since is everything
-                around that camera: a team, an edit suite, a design desk, and a list of clients who now
-                call us for more than one thing at a time.
+               Founded in 2025, Captura Media began with a simple passion: to capture life's most beautiful moments and turn them into timeless memories. What started as a small studio has grown into a full-service photography company serving clients worldwide
               </p>
               <p className="text-[1.05rem] text-slate">
-                We're still based in Accra, still hands-on with every booking, and still built around
-                the same idea — that the people behind the lens, the edit, and the layout should be
-                talking to each other, not handing files between agencies.
+            Our team of dedicated photographers brings together decades of combined experience, artistic vision, and technical expertise. We specialize in weddings, portraits, events, and commercial photography
+              </p>
+
+                <p className="text-[1.05rem] text-slate">
+Every photo we take is infused with creativity, emotion, and attention to detail. We don't just take pictures; we tell stories through our lens.
               </p>
             </Reveal>
             <Reveal variant="scale" className="aspect-[4/5] rounded-sm overflow-hidden img-mask">
@@ -74,9 +74,7 @@ export default function About() {
                 To be West Africa's go-to studio for stories worth keeping.
               </h3>
               <p className="text-slate">
-                We want Captura to be the first name that comes up when someone's planning a wedding,
-                launching a brand, or putting on an event — because the work speaks for itself, long
-                after the day is over.
+                To be the trusted visual partner for Ghana leading brands, consistently delivering innovative multimedia solutions that elevate their stories and fuel their success.
               </p>
             </Reveal>
             <Reveal variant="right" delay={90} className="border border-ink/10 rounded-sm p-8 sm:p-10 bg-paper">
@@ -85,9 +83,7 @@ export default function About() {
                 One team, three crafts, zero hand-offs.
               </h3>
               <p className="text-slate">
-                We exist to give clients photography, video, and design from a single team that
-                already knows the brief — so nothing gets lost in translation between vendors, and
-                every deliverable feels like it came from the same story.
+               We amplify brands through authentic visual storytelling, crafting impactful multimedia experiences that spark meaningful connections, drive business growth, and leave a lasting impression on their audiences.
               </p>
             </Reveal>
           </div>
@@ -132,8 +128,8 @@ export default function About() {
           </Reveal>
           <div className="grid sm:grid-cols-3 gap-8 sm:gap-10">
             {coreValues.map((value, i) => (
-              <Reveal key={value.tag} delay={i * 90}>
-                <span className="exif-tag mb-4">{value.tag}</span>
+              <Reveal key={value.id} delay={i * 90}>
+                {/* <span className="exif-tag mb-4">{value.tag}</span> */}
                 <h3 className="text-[1.5rem] mt-4 mb-3">{value.title}</h3>
                 <p className="text-slate">{value.text}</p>
               </Reveal>
@@ -152,7 +148,7 @@ export default function About() {
               after every shoot.
             </p>
           </Reveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center items-center">
             {teamMembers.map((member, i) => (
               <Reveal key={member.id} delay={i * 90}>
                 <div className="aspect-[4/5] rounded-sm overflow-hidden img-mask mb-5">

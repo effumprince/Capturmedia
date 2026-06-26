@@ -86,7 +86,7 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setMenuOpen((o) => !o)}
-          className="md:hidden flex flex-col gap-[5px] w-6 z-[210]"
+          className="md:hidden flex flex-col gap-[5px] w-6 z-[210] text-white"
         >
           <span
             className={`h-[2px] bg-ink transition-transform duration-300 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`}

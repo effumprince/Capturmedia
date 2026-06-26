@@ -47,13 +47,15 @@ export interface BookingFormState {
 export interface TeamMember {
   id: string;
   role: string;
-  department: 'Photography' | 'Videography' | 'Design' | 'Studio';
+  department: 'CEO & Founder' | 'Management Officer' | 'Client Relations Officer';
+
   bio: string;
   image: string;
 }
 
 export interface ValuePillar {
-  tag: string;
+  // tag: string;
+  id: number;
   title: string;
   text: string;
 }

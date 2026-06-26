@@ -29,7 +29,7 @@ const packages = [
   },
 ];
 
-const serviceImages = [catalogItems[1].image, catalogItems[0].image, catalogItems[2].image];
+const serviceImages = [catalogItems[1].image, catalogItems[0].image, catalogItems[7].image];
 
 export default function Services() {
   return (

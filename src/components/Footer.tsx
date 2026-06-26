@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-10 lg:gap-12 pb-10 sm:pb-16 border-b border-white/10">
           <div className="flex flex-col gap-5">
             <Link to="/" className="flex items-center gap-2.5">
-              <img src={logo} alt="Captura Media" className="h-7 w-auto brightness-0 invert" />
+              <img src="https://res.cloudinary.com/dszlo11rt/image/upload/v1769000047/bbbb_gjoyzl.png" alt="Captura Media" className=" w-30 brightness-0 invert" />
             </Link>
             <p className="max-w-[280px] text-sm text-white/70">
               A creative studio for photography, videography and graphic design — based in Accra, working everywhere.

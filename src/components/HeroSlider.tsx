@@ -20,7 +20,7 @@ export default function HeroSlider() {
         {heroImages.map((src, i) => (
           <div
             key={src}
-            className={`hero-slide ${i === current ? 'is-active' : ''}`}
+            className={`hero-slide ${i === current ? 'is-active' : ''} object-cover absolute inset-0 w-full h-full transition-opacity duration-1000`}
             style={{ backgroundImage: `url(${src})` }}
           />
         ))}
@@ -61,7 +61,7 @@ export default function HeroSlider() {
             <span className="exif-tag">Photography — Videography — Graphic Design</span>
           </div>
 
-          <h1 className="lg:text-[clamp(2.9rem,15vh,9rem)] md:text-[clamp(1.5rem,14vh,5rem)] sm:text-[clamp(1.5rem,13vh,5rem)] text-[clamp(1.5rem,10vh,5rem)] leading-[0.95] max-w-[18ch]">
+          <h1 className="lg:text-[clamp(2.9rem,15vh,9rem)] md:text-[clamp(1.5rem,14vh,5rem)] sm:text-[clamp(1.5rem,12vh,5rem)] text-[clamp(1.5rem,9vh,5rem)] leading-[0.95] max-w-[18ch]">
             <span className="hero-title-line">
               <b style={{ animationDelay: '450ms' }}>Creating Visually</b>
             </span>
@@ -77,7 +77,7 @@ export default function HeroSlider() {
             className="flex justify-between items-end mt-6 sm:mt-10 gap-8 flex-wrap animate-rise"
             style={{ animationDelay: '1000ms' }}
           >
-            <p className="max-w-[420px] text-white/80 text-base">
+            <p className="max-w-[420px] text-white/80  lg:text-[18px] md:text-[15px] sm:text-[15px] text-[13px]">
              We amplify brands through authentic visual storytelling, crafting impactful multimedia experience that spark meaningful connections
              drive business growth, and leave a lasting impression on their audiences
             </p>
