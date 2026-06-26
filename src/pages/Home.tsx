@@ -81,16 +81,13 @@ export default function Home() {
       </section>
 
       {/* Catalog teaser */}
-      <section className="py-16 sm:py-28">
-        <div className="max-w-[1320px] mx-auto px-6 sm:px-10">
-          <Reveal className="flex justify-between items-end gap-8 flex-wrap mb-12 sm:mb-16">
-            <h2 className="text-[clamp(2.5rem,6vw,5.5rem)]">Recent work</h2>
-            <p className="max-w-[360px] text-[1.02rem] text-slate">
-              A short cut of what's left the studio lately — weddings, portraits and design work for
-              real clients.
-            </p>
+      <section className="py-25" id="catalog">
+        <div className=" py-20 mx-auto px-6  sm:px-10">
+          <Reveal className="items-center">
+            <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] text-white text-center">VIEW ALL OUR WORKS</h2>
+            
           </Reveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-7">
+          {/* <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-7">
             {teaserItems.map((item, i) => (
               <Reveal key={item.id} delay={i * 90} className="aspect-[4/5] rounded-sm overflow-hidden img-mask">
                 <div className="img-mask-inner">
@@ -98,9 +95,11 @@ export default function Home() {
                 </div>
               </Reveal>
             ))}
-          </div>
+          </div> */}
           <Reveal className="text-center mt-12">
-            <Button to="/catalog" variant="ghost">View full catalog</Button>
+            <Button to="/catalog" className='bg-transparent border-2 border-white  py-5 px-5'>
+                <p className='text-[18px]'>View full catalog</p>
+            </Button>
           </Reveal>
         </div>
       </section>

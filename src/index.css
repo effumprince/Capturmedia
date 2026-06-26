@@ -231,3 +231,13 @@ select:focus-visible {
   transform-origin: 70px 70px;
   transition: transform 0.9s var(--ease-in-out-custom);
 }
+
+
+#catalog{
+  background:linear-gradient(rgba(0, 0, 0, 0.567),rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.627)),url('https://res.cloudinary.com/dszlo11rt/image/upload/v1782387268/Firefly_6_zdlzu1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;  
+  
+}

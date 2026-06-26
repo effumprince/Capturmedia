@@ -8,7 +8,7 @@ import type { NavLink, ServiceSummary, CatalogItem, ServiceCategory, Subcategory
 export const heroImages = [
   "https://res.cloudinary.com/dszlo11rt/image/upload/v1782387268/Firefly_6_zdlzu1.jpg",
    "https://res.cloudinary.com/dszlo11rt/image/upload/v1782387555/Firefly_4_1_hr8rnj.jpg",
-    "https://res.cloudinary.com/dszlo11rt/image/upload/v1782387617/Firefly_qw2yle.png",
+    "https://res.cloudinary.com/dszlo11rt/image/upload/v1782406719/Firefly_7_v5g9xd.jpg",
   ];
 
 export const navLinks: NavLink[] = [
