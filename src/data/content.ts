@@ -11,12 +11,12 @@ export const heroImages = [
     "https://res.cloudinary.com/dszlo11rt/image/upload/v1782406719/Firefly_7_v5g9xd.jpg",
   ];
 
-export const navLinks: NavLink[] = [
+export const navLinks: (NavLink & { className?: string })[] = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
   { label: 'Catalog', to: '/catalog' },
-  // { label: 'Booking', to: '/booking' },
+  { label: 'Booking', to: '/booking', className:"md:hidden"},
 ];
 
 export const services: ServiceSummary[] = [
